@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>無題ドキュメント</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="sass/style.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+ 
+$(function() {
+ 
+ var items = 30;//気泡の個数
+ 
+for (var i=0; i<=items; i++) {
+    var moveVal = Math.ceil( Math.random()*50 );
+    var posVal = Math.ceil( Math.random()*50 );
+    var scaleVal = Math.ceil( Math.random()*10 );
+    var shakeVal = Math.ceil( Math.random()*5 );
+    $(".field").append('<div class="move'+moveVal+' pos'+posVal+'"><div class="scale'+scaleVal+'"><div class="item shake'+shakeVal+'"></div></div>');
+}
+  });
+ </script>
+ 
+</head>
+
+<body> 
+<div class="field">
+
+</div>
+ 
+</body>
+</html>
